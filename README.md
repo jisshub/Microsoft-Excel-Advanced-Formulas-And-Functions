@@ -116,8 +116,39 @@ Error - #VALUE!
 - For example, we perform an arithmetic operation on a date.
 
 
-Time: 5:14
+## Type 4 (#DIV/0!)
 
-https://www.udemy.com/course/excel-for-analysts/learn/lecture/15116878#overview
+![](./screenshots/error_type_4.jpg)
 
+
+## Type 5 (#REF!)
+
+It is a reference error.
+**#REF!** error happens when we delete any important columns or rows from our sheets.
+
+![](./screenshots/error_type_4.jpg)
+
+
+### Screenshots
+
+![](./screenshots/error_type_5.jpg)
+
+- We will delete the Growth Rate column and then try to perform the formula.
+- As a result of this all columns will be filled with #REF! error.
+
+![](./screenshots/error_type_6.jpg)
+
+- All the cells linked with the Growth Rate column will be filled with #REF! error.
+
+
+## Type 6 (#N/A)
+
+![](./screenshots/error_type_7.jpg)
+
+- This error mostly occurs when we search for a match in a record and sadly we don't find any match. This is N/A error.
+
+# Formula Auditing
+
+
+https://www.udemy.com/course/excel-for-analysts/learn/lecture/15116888#overview
 
