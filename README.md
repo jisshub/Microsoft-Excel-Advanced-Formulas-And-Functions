@@ -147,8 +147,44 @@ It is a reference error.
 
 - This error mostly occurs when we search for a match in a record and sadly we don't find any match. This is N/A error.
 
-# Formula Auditing
+# Formula Auditing: Trace Precedent & Dependents
+
+![](./screenshots/trace_dependent_1.jpg)
+
+# Navigating Excel Workbook with Ctrl Shortcuts.
+
+**Ctrl + A** - Jumps to last cell in a data region, in the direction of arrow.
+
+**Ctrl + Shift + Arrow** - Selects to the last cell in a data region, in the direction of the arrow.
+
+**Ctrl + Home/End** - Jumps to the Home(top-left) and End(bottom-right) cell in a data region.
+
+**Ctrl + .**  - Jumps Straight to each corner within a selected cell range.
+
+**Ctrl + PageUP/PageDown** - Switches worksheet tabs, either to left or right.
 
 
-https://www.udemy.com/course/excel-for-analysts/learn/lecture/15116888#overview
+## Examples:
+
+**Ctrl + Shift + Down Arrow** - To select to the last cell in a column.
+
+## Function Shortcuts
+
+### F1
+    - Launches the help window.
+    - Links to the microsoft support
+
+### F2
+    - Allows you to edit the active cell.
+    - Highlights cells referenced by active formula.
+
+### F4
+    - Repeats the last action takes.
+    - Toggles absolute/relative cell reference with a formula.
+
+### F9
+    - Calculates all workbook formulas.
+    - Evaluates each function argument within the formula bar.
+
+
 
