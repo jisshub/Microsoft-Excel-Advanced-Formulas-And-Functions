@@ -186,5 +186,104 @@ It is a reference error.
     - Calculates all workbook formulas.
     - Evaluates each function argument within the formula bar.
 
+## Create DropDown Menu with Data Validation
+
+- Choose Data Validation from the menu bar.
+- Set validation criteria
+
+    **Allow:** List
+
+    **Source:** List of values
+
+![](./screenshots/data_validation.jpg)
 
 
+## Excel Exercise - 1
+
+### 1. Division in Excel
+
+The simplest way to suppress the #DIV/0! error is to use the IF function to evaluate the existence of the denominator. If it’s a 0 or no value, then show a 0 or no value as the formula result instead of the #DIV/0! error value, otherwise calculate the formula.
+
+For example, if the formula that returns the error is =A2/A3, use =IF(A3,A2/A3,0) to return 0 or =IF(A3,A2/A3,””) to return an empty string. You could also display a custom message like this: =IF(A3,A2/A3,”Input Needed”). With the QUOTIENT function from the first example you would use =IF(A3,QUOTIENT(A2,A3),0). This tells Excel IF(A3 exists, then return the result of the formula, otherwise ignore it).
+
+
+![](./screenshots/ex_1.jpg)
+
+
+# Logical Operators
+
+## Anatomy of IF Statement  
+
+![](./screenshots/if_statement.jpg)
+
+
+## IF Statement Example:
+
+- Fill the Freeze column with Yes or No values.
+- Check the if condition we wrote
+- If the temparature is less than 32, then we add **Yes** as value otherwise we add **No**. 
+
+![](./screenshots/freeze.jpg)
+
+
+## Nesting IF Statements
+
+![](./screenshots/nested_if.jpg)
+
+### Example:
+
+![](./screenshots/nested_if_1.jpg)
+
+Description:
+
+- If temparature < 40 then add value Cold to cell, else
+we check for other if condition and if temperature > 80, then add Hot to cell else add value Mild.
+ 
+
+## Additonal Conditional AND/OR Operators
+
+![](./screenshots/logical_opr.jpg)
+
+### AND OPERATOR 
+
+![](./screenshots/additional_if_operator.jpg)
+
+
+### OR OPERATOR
+
+![](./screenshots/additional_if_operator_OR.jpg)
+
+### NOT OPERATOR
+
+![](./screenshots/not_operator.jpg)
+
+#### NOT Operator Example-
+
+![](./screenshots/not_operator_1.jpg)
+
+## Fixing errors with IFERROR 
+
+![](./screenshots/iferror.jpg)
+
+- Set a new value and replace the NA error.
+
+### Example for IFERROR:
+
+![](./screenshots/iferror_1.jpg)
+
+- Here if the value returns an error, we replace the error with "Other" in the column cell.
+
+
+## Common IS Statements
+
+![](./screenshots/is_statements.jpg)
+
+### Example - IS Statements
+
+- Check whther the temparature column has blank values or errors.
+- We use the **ISBLANK** function to check for blank values.
+- We use the **ISERROR** function to check for ERROR values.
+- Formula
+    **=OR(ISERROR(G2), ISBLANK(G2))**
+    
+![](./screenshots/is_statements_1.jpg)
