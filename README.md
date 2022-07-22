@@ -62,6 +62,9 @@ Eg: =YEAR(F2), =YEAR(F3) etc.
 
 ![](./screenshots/LEFT_FN_2.jpg)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
+
 # Reference Types
 
 ![](./screenshots/reference_types.jpg)
@@ -102,6 +105,8 @@ Aim is to find the starting balance for the given 10 years.
 
 ![](./screenshots/reference_types_3.jpg)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 # Excel Error Types
 
 ## Type 1
@@ -159,6 +164,8 @@ It is a reference error.
 
 - This error mostly occurs when we search for a match in a record and sadly we don't find any match. This is N/A error.
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 # Formula Auditing: Trace Precedent & Dependents
 
 ![](./screenshots/trace_dependent_1.jpg)
@@ -180,6 +187,8 @@ It is a reference error.
 
 **Ctrl + Shift + Down Arrow** - To select to the last cell in a column.
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 ## Function Shortcuts
 
 ### F1
@@ -198,6 +207,8 @@ It is a reference error.
     - Calculates all workbook formulas.
     - Evaluates each function argument within the formula bar.
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 ## Create DropDown Menu with Data Validation
 
 - Choose Data Validation from the menu bar.
@@ -209,6 +220,8 @@ It is a reference error.
 
 ![](./screenshots/data_validation.jpg)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 
 ## Excel Exercise - 1
 
@@ -222,6 +235,8 @@ For example, if the formula that returns the error is =A2/A3, use =IF(A3,A2/A3,0
 ![](./screenshots/ex_1.jpg)
 
 
+**[⬆ Back to Top](#Excel-Notes)**
+
 # Logical Operators
 
 ## Anatomy of IF Statement  
@@ -229,6 +244,8 @@ For example, if the formula that returns the error is =A2/A3, use =IF(A3,A2/A3,0
 ![](./screenshots/if_statement.jpg)
 
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 ## IF Statement Example:
 
 - Fill the Freeze column with Yes or No values.
@@ -237,6 +254,8 @@ For example, if the formula that returns the error is =A2/A3, use =IF(A3,A2/A3,0
 
 ![](./screenshots/freeze.jpg)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 
 ## Nesting IF Statements
 
@@ -252,6 +271,8 @@ Description:
 we check for other if condition and if temperature > 80, then add Hot to cell else add value Mild.
  
 
+**[⬆ Back to Top](#Excel-Notes)**
+
 ## Additonal Conditional AND/OR Operators
 
 ![](./screenshots/logical_opr.jpg)
@@ -260,6 +281,8 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
 
 ![](./screenshots/additional_if_operator.jpg)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 
 ### OR OPERATOR
 
@@ -273,6 +296,8 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
 
 ![](./screenshots/not_operator_1.jpg)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
 ## Fixing errors with IFERROR 
 
 ![](./screenshots/iferror.jpg)
@@ -286,6 +311,8 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
 - Here if the value returns an error, we replace the error with "Other" in the column cell.
 
 
+**[⬆ Back to Top](#Excel-Notes)**
+
 ## Common IS Statements
 
 ![](./screenshots/is_statements.jpg)
@@ -298,9 +325,14 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
 - Formula
     **=OR(ISERROR(G2), ISBLANK(G2))**
     
+
+**[⬆ Back to Top](#Excel-Notes)**
+
 ![](./screenshots/is_statements_1.jpg)
 
 # Basic Statistics Function
 
 ![](./screenshots/basic_stats_func.png)
 
+
+**[⬆ Back to Top](#Excel-Notes)**
