@@ -1,10 +1,17 @@
 # Excel Notes
 
-[Match Function](#Match-Function)
+[MATCH FUNCTION](#Match-Function)
+
+[YEAR FUNCTION](#YEAR-FUNCTION)
+
+[LEFT FUNCTION](#LEFT-FUNCTION)
+
+[Reference Types](#reference-types)
+
 
 # Excel Formula Syntax
 
-## Match function
+## MATCH FUNCTION
 
 ![](./screenshots/match_function.jpg)
 
