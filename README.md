@@ -28,6 +28,7 @@ Eg: =YEAR(F2), =YEAR(F3) etc.
 
 ![](./screenshots/year_function_1.jpg)
 
+**[⬆ Back to Top](#Excel-Notes)**
 ## LEFT FUNCTION
 
 ![](./screenshots/left_fn1.jpg)
