@@ -1,3 +1,7 @@
+# Excel Notes
+
+[Match Function](#Match-Function)
+
 # Excel Formula Syntax
 
 ## Match function
@@ -287,3 +291,8 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
     **=OR(ISERROR(G2), ISBLANK(G2))**
     
 ![](./screenshots/is_statements_1.jpg)
+
+# Basic Statistics Function
+
+![](./screenshots/basic_stats_func.png)
+
