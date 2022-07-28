@@ -8,7 +8,7 @@
 
 [Reference Types](#reference-types)
 
-
+[Basic Statistics Function](#Basic-Statistics-Function)
 # Excel Formula Syntax
 
 ## MATCH FUNCTION
@@ -335,4 +335,76 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
 ![](./screenshots/basic_stats_func.png)
 
 
+## RANK Function, LARGE/SMALL Function
+
+![](./screenshots/rankfn.png)
+
+**Example 1**:
+
+if we want to find 10th highest salary from an array of salaries, we can use the LARGE function.
+
+Syntax:
+
+    =LARGE(array,10)
+
+**Example 2**:
+
+If we want to find 10th lowest salary from an array of salaries, we can use the LARGE function.
+
+Syntax:
+
+    =SMALL(array,10)
+
+**Example 3**:
+
+Q. Find the rank of each salary in the array of salaried.
+
+Syntax:
+
+    =RANK(E2, $E$2:$E$4135)
+
+    Here, 
+    E2 is the salary column cell for which we have to obtain the rank.
+    $E$2:$E$4135 is the range of the array of salaries.
+
+Similary we find the rank of other salary columns cells.
+
+
+**Key Shortcuts:**
+
+    CTRL + SHIFT + DOWN ARROW -> Selects to the last cell in a data region, in the direction of the arrow.
+
+
+## PERCENTRANK Function
+
+![](./screenshots/percentrank.png)
+
+**Example:**
+
+Q. Find the percentage rank of each salary in the array of salaries.
+
+    ==PERCENTRANK($F$2:$F$4135, F2)
+
+    Here, 
+    F2 is the rank cell for which we have to obtain the percentage rank.
+    $F$2:$F$4135 is the range of the array of salaries. 
+
 **[⬆ Back to Top](#Excel-Notes)**
+
+
+## SUMPRODUCT Function
+
+![](./screenshots/sumproduct.png)
+
+
+## SUMPRODUCT Function Advanced
+
+![](./screenshots/sumproduct2.png)
+
+### Example:
+
+**Find total shipping cost ?**
+
+![](./screenshots/sumproduct3.png)
+
+
