@@ -337,7 +337,7 @@ we check for other if condition and if temperature > 80, then add Hot to cell el
 
 ## RANK Function, LARGE/SMALL Function
 
-![](./screenshots/rankfn.png)
+![](./screenshots/rankfn.jpg)
 
 **Example 1**:
 
@@ -377,7 +377,7 @@ Similary we find the rank of other salary columns cells.
 
 ## PERCENTRANK Function
 
-![](./screenshots/percentrank.png)
+![](./screenshots/percentrank.jpg)
 
 **Example:**
 
@@ -394,17 +394,36 @@ Q. Find the percentage rank of each salary in the array of salaries.
 
 ## SUMPRODUCT Function
 
-![](./screenshots/sumproduct.png)
+![](./screenshots/sumproduct.jpg)
 
 
 ## SUMPRODUCT Function Advanced
 
-![](./screenshots/sumproduct2.png)
+![](./screenshots/sumproduct2.jpg)
 
 ### Example:
 
 **Find total shipping cost ?**
 
-![](./screenshots/sumproduct3.png)
+![](./screenshots/sumproduct3.jpg)
 
 
+## Conditional Aggregation with COUNTIF, SUMIF, AVERAGEIF Functions
+
+![](./screenshots/conditional.jpg)
+
+![](./screenshots/conditional2.jpg)
+
+
+**[⬆ Back to Top](#Excel-Notes)**
+
+## Build a Dashboard With COUNTIF, SUMIF, AVERAGEIF Functions
+
+### **Total Salary is**
+    =SUMIFS('Salary Data'!$E$2:$E$4135, 'Salary Data'!$A$2:$A$4135, 'Team Salary Dashboard'!$B$6, 'Salary Data'!$B$2:$B$4135, 'Team Salary Dashboard'!$C$2)
+
+### **Count of Players**
+    ==COUNTIFS('Salary Data'!B6:B4139, 'Team Salary Dashboard'!C6, 'Salary Data'!A6:A4139, 'Team Salary Dashboard'!B9)
+
+    **GETTING WRONG RESULT**
+    
