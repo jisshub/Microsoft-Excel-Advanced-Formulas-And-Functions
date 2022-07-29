@@ -1,4 +1,4 @@
-# Excel Notes
+# Excel Formulas & Functions
 
 [MATCH FUNCTION](#Match-Function)
 
@@ -8,13 +8,20 @@
 
 [Reference Types](#reference-types)
 
+[Excel Error Types](#Excel-Error-Types)
+
+[#Navigating Excel Workbook with Ctrl Shortcuts.](#Navigating-Excel-Workbook-with-Ctrl-Shortcuts.)
+
+[Create DropDown Menu with Data Validation](#Create-DropDown-Menu-with-Data-Validation)
+
+[Logical Operators](#Logical-Operators)
+
 [Basic Statistics Function](#Basic-Statistics-Function)
 
-[RANK FUNCTION, LARGE AND SMALL FUNCTION](##RANK-Function,-LARGE/SMALL-Function)
+[Lookup and Reference Functions](#Lookup-and-Reference-Functions)
 
-[Data-Profiling-with-COUNT-&-SUMPRODUCT-Functions](##Data-Profiling-with-COUNT-&-SUMPRODUCT-Functions)
+[HLOOKUP & VLOOKUP](#HLOOKUP-&-VLOOKUP)
 
-[PERCENTRANK FUNCTION](##PERCENTRANK-Function)
 # Excel Formula Syntax
 
 ## MATCH FUNCTION
@@ -215,7 +222,7 @@ It is a reference error.
 
 
 **[⬆ Back to Top](#Excel-Notes)**
-## Create DropDown Menu with Data Validation
+# Create DropDown Menu with Data Validation
 
 - Choose Data Validation from the menu bar.
 - Set validation criteria
@@ -467,4 +474,98 @@ Q. Find the percentage rank of each salary in the array of salaries.
     =SUMPRODUCT((Zips<>"")/COUNTIF(Zips, Zips&""))
 
 ![](./screenshots/sumproductcount.jpg)
+
+
+# Lookup and Reference Functions
+
+## Named Ranges
+
+![](./screenshots/named_range.png)
+
+- We can set the name for our selected cells.
+- We can use the name to refer to the selected cells.
+
+**Demo:**
+
+![](./screenshots/named_range_1.png)
+
+* In the above screenshot, we can see the name of the named range is "Fielding".
+* We can view thee name by selecting the name in the "Named Manager" tab under "Formulas".
+
+
+## ROW & ROWS Functions
+
+![](./screenshots/row.png)
+
+
+**Demo:**
+
+![](./screenshots/row_1.jpg)
+
+
+## COLUMN & COLUMNS Functions
+
+![](./screenshots/column.png)
+
+**Demo:**
+
+![](./screenshots/column_demo.jpg)
+
+
+# HLOOKUP & VLOOKUP
+
+## VLOOKUP FUNCTION
+
+- Generaly used to combine two different arrays having common fields.
+
+**Example:**
+
+![](./screenshots/vlookup.png)
+
+In above screenshot, 
+
+- In *Source* array, we have the **Product, Quantity, Product ID and Price**.
+- In *Lookup* array, we have the **Product and Price**.
+- Common field is **Product**.
+
+we combine both arrays using a common field **Product**.
+
+### **Formula Description**
+
+**VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])**
+
+        * lookup_value: common field to be used for lookup.
+        * table_array: array containing the data to be used for lookup.
+        * col_index_num: column index number of the table_array. This is the column number of the field to be used for lookup.
+        * range_lookup: optional argument to specify the range of the lookup.
+         we can put 0, 1 or False in this argument.
+
+**Task:**
+
+    - Find the price in lookup array and pull the price into the source array ?.
+
+![](./screenshots/vlookup1.jpg)
+
+
+**Solution:**
+
+            D2=VLOOKUP(A2, $G1:$H5, 2, 0)
+
+    - In cell D2 of the source array, we created a Price column.
+    - Pass A2 as the lookup_value,
+    - Pass $G1:$H5 as the table_array containing the data to be used for lookup,
+    - Pass 2 as the col_index_num, since this column contains the price value we are looking for.
+    - Pass 0 as the range_lookup, since we are not looking for a range.
+    - Finally Price column in Source array will be populated with the price value from the lookup array.
+
+## HLOOKUP FUNCTION
+
+    - Generaly used to combine two different arrays having common fields.
+    - Used if table arrays are transposed.
+
+![](./screenshots/hlookup.jpg)
+
+https://www.udemy.com/course/excel-for-analysts/learn/lecture/3429214#content
+
+Time: 3:10
 
