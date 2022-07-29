@@ -11,6 +11,10 @@
 [Basic Statistics Function](#Basic-Statistics-Function)
 
 [RANK FUNCTION, LARGE AND SMALL FUNCTION](##RANK-Function,-LARGE/SMALL-Function)
+
+[Data-Profiling-with-COUNT-&-SUMPRODUCT-Functions](##Data-Profiling-with-COUNT-&-SUMPRODUCT-Functions)
+
+[PERCENTRANK FUNCTION](##PERCENTRANK-Function)
 # Excel Formula Syntax
 
 ## MATCH FUNCTION
@@ -376,7 +380,6 @@ Similary we find the rank of other salary columns cells.
 
     CTRL + SHIFT + DOWN ARROW -> Selects to the last cell in a data region, in the direction of the arrow.
 
-
 ## PERCENTRANK Function
 
 ![](./screenshots/percentrank.jpg)
@@ -429,4 +432,39 @@ Q. Find the percentage rank of each salary in the array of salaries.
 
 
 ## Data Profiling with COUNT & SUMPRODUCT Functions
+
+### ROW Function
+- **Counting rows in a sheet**
+
+    = ROW(array)
+
+![](./screenshots/rowcount.jpg)
+
+### COUNTBLANK Function
+- **Counting blank columns in a column**
+
+    =COUNTBLANK(array)
+
+![](./screenshots/countblank.jpg)
+
+### COUNT Function
+- **Counting numerical values in a column**
+
+    =COUNT(array)
+
+![](./screenshots/count.jpg)
+
+### COUNTIF Function
+- **Counting valid records in a column**
+
+    =COUNTIF(array, "*")
+
+![](./screenshots/countif.jpg)
+
+### SUMPRODUCT Function
+- **Counting distinct records in a column**
+
+    =SUMPRODUCT((Zips<>"")/COUNTIF(Zips, Zips&""))
+
+![](./screenshots/sumproductcount.jpg)
 
