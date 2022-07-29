@@ -10,7 +10,7 @@
 
 [Excel Error Types](#Excel-Error-Types)
 
-[#Navigating Excel Workbook with Ctrl Shortcuts.](#Navigating-Excel-Workbook-with-Ctrl-Shortcuts.)
+[Navigating Excel Workbook with Ctrl Shortcuts.](#Navigating-Excel-Workbook-with-Ctrl-Shortcuts.)
 
 [Create DropDown Menu with Data Validation](#Create-DropDown-Menu-with-Data-Validation)
 
