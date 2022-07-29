@@ -9,6 +9,8 @@
 [Reference Types](#reference-types)
 
 [Basic Statistics Function](#Basic-Statistics-Function)
+
+[RANK FUNCTION, LARGE AND SMALL FUNCTION](##RANK-Function,-LARGE/SMALL-Function)
 # Excel Formula Syntax
 
 ## MATCH FUNCTION
@@ -420,10 +422,11 @@ Q. Find the percentage rank of each salary in the array of salaries.
 ## Build a Dashboard With COUNTIF, SUMIF, AVERAGEIF Functions
 
 ### **Total Salary is**
-    =SUMIFS('Salary Data'!$E$2:$E$4135, 'Salary Data'!$A$2:$A$4135, 'Team Salary Dashboard'!$B$6, 'Salary Data'!$B$2:$B$4135, 'Team Salary Dashboard'!$C$2)
+    =SUMIFS('Salary Data'!$E:$E, 'Salary Data'!$B:$B, 'Team Salary Dashboard'!$C$2, 'Salary Data'!$A:$A, 'Team Salary Dashboard'!$B5)
 
 ### **Count of Players**
-    ==COUNTIFS('Salary Data'!B6:B4139, 'Team Salary Dashboard'!C6, 'Salary Data'!A6:A4139, 'Team Salary Dashboard'!B9)
+    =COUNTIFS('Salary Data'!$B:$B, 'Team Salary Dashboard'!$C$2, 'Salary Data'!$A:$A, 'Team Salary Dashboard'!$B5)
 
-    **GETTING WRONG RESULT**
-    
+
+## Data Profiling with COUNT & SUMPRODUCT Functions
+
