@@ -10,7 +10,7 @@
 
 [Excel Error Types](#Excel-Error-Types)
 
-[Navigating Excel Workbook with Ctrl Shortcuts.](#Navigating-Excel-Workbook-with-Ctrl-Shortcuts.)
+[Navigating Excel Workbook with Ctrl Shortcuts](#Navigating-Excel-Workbook-with-Ctrl-Shortcuts)
 
 [Create DropDown Menu with Data Validation](#Create-DropDown-Menu-with-Data-Validation)
 
@@ -183,7 +183,7 @@ It is a reference error.
 
 ![](./screenshots/trace_dependent_1.jpg)
 
-# Navigating Excel Workbook with Ctrl Shortcuts.
+# Navigating Excel Workbook with Ctrl Shortcuts
 
 **Ctrl + A** - Jumps to last cell in a data region, in the direction of arrow.
 
