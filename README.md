@@ -20,7 +20,7 @@
 
 [Lookup and Reference Functions](#Lookup-and-Reference-Functions)
 
-[HLOOKUP & VLOOKUP](#HLOOKUP-&-VLOOKUP)
+[HLOOKUP and VLOOKUP](#HLOOKUP-and-VLOOKUP)
 
 # Excel Formula Syntax
 
@@ -512,7 +512,7 @@ Q. Find the percentage rank of each salary in the array of salaries.
 ![](./screenshots/column_demo.jpg)
 
 
-# HLOOKUP & VLOOKUP
+# HLOOKUP and VLOOKUP
 
 ## VLOOKUP FUNCTION
 
@@ -565,7 +565,142 @@ we combine both arrays using a common field **Product**.
 
 ![](./screenshots/hlookup.jpg)
 
-https://www.udemy.com/course/excel-for-analysts/learn/lecture/3429214#content
+## Joining Data with VLOOKUP
 
-Time: 3:10
+### Task:
+
+We have 2 table arrays 'Fielding' and 'Hitting Data' with common fields 'Player' and 'Year'.
+
+**Hitting Data:**
+
+![](./screenshots/source.jpg)
+
+
+This is the Source array.
+
+
+**Fielding:**
+
+![](./screenshots/ararry1.jpg)
+
+Our job is to join the columns from C to G (POS, PUTOUTS, ASSISTS, ERRORS, DP) in the Hitting Data array with the columns in Fielding array. So We have to populate the Hitting Data arary with these columns.
+
+### Solution
+
+**Steps**
+
+    1. Create a key column in both *Hitting Data* array and *Fielding Data* array.
+
+![](./screenshots/key.jpg)
+
+        - Keys should be unique.
+        - Keys should be in first column of the both array ie Column A.
+
+
+    2. Find which fields in **Fielding Data** array are looking to pull in to the **Hitting Data** array. then copy paste the fields in the **Hitting Data** array.
+    
+![](./screenshots/fields.jpg)
+
+
+    3. Populating Column **POS** in Hiding Data Array.
+
+    Formula:
+
+    =VLOOKUP($A2, 'Fielding Data'!$A$1:$H$12056, 4, 0)
+
+    Here, 
+        - A2 is the lookup_value or common field, 
+        - 'Fielding Data'!$A$1:$H$12056 is the table_array(Fielding Data Array), 
+        - 4 is the col_index_num, 
+        - 0 is the range_lookup
+
+
+    4. Populating Column **Putouts** in Hiding Data Array.
+
+    Formula:
+
+    =VLOOKUP($A2, 'Fielding Data'!$A$1:$H$12056, 5, 0)
+
+    Here, 
+        - A2 is the lookup_value or common field, 
+        - 'Fielding Data'!$A$1:$H$12056 is the table_array(Fielding Data Array), 
+        - 5 is the col_index_num, 
+        - 0 is the range_lookup
+
+
+    5. Populating Column **Assists** in Hiding Data Array.
+
+    Formula:
+
+    =VLOOKUP($A2, 'Fielding Data'!$A$1:$H$12056, 6, 0)
+
+    Here, 
+        - A2 is the lookup_value or common field, 
+        - 'Fielding Data'!$A$1:$H$12056 is the table_array(Fielding Data Array), 
+        - 6 is the col_index_num, 
+        - 0 is the range_lookup
+
+
+    6. Populating Column **Errors** in Hiding Data Array.
+
+    Formula:
+
+    =VLOOKUP($A2, 'Fielding Data'!$A$1:$H$12056, 7, 0)
+
+    Here, 
+        - A2 is the lookup_value or common field, 
+        - 'Fielding Data'!$A$1:$H$12056 is the table_array(Fielding Data Array), 
+        - 7 is the col_index_num, 
+        - 0 is the range_lookup
+
+    
+    7. Populating Column **DP** in Hiding Data Array.
+
+    Formula:
+
+    =VLOOKUP($A2, 'Fielding Data'!$A$1:$H$12056, 8, 0)
+
+    Here, 
+        - A2 is the lookup_value or common field, 
+        - 'Fielding Data'!$A$1:$H$12056 is the table_array(Fielding Data Array), 
+        - 8 is the col_index_num, 
+        - 0 is the range_lookup
+
+![](./screenshots/lookup1.jpg)
+
+All the columns are populated with the values from the Fielding Data array.
+
+## Fixing Errors with IFERROR & VLOOKUP
+
+Dealing with errors while using VLOOKUP function.
+
+### Formula:
+
+**=IFERROR(VLOOKUP($A2, 'Fielding Data'!$A$1:$H$12056, 4, 0), "Other")**
+
+- Here we replace errors(N/A error) with error value "Other".
+
+
+## VLOOKUP Reference Array Options
+
+
+We can update our formula using named array,
+
+**=IFERROR(VLOOKUP($A2, LookupArray, 4, 0), "Other")**
+
+- LookupArray is the name of the array. It replaces the 'Fielding Data'!$A$1:$H$12056 in the formula.
+
+- Choose *Name Manager* to create a named array.
+
+- Click *New* button.
+
+![](./screenshots/named_range1.jpg)
+
+- We can further update the formula.
+
+**=IFERROR(VLOOKUP($A2, 'Fielding Data'!A:H, 4, 0), "Other")**
+
+Just Select the Column from A to H.
+
+## Approximate Match Lookups
 
