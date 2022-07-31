@@ -22,6 +22,8 @@
 
 [HLOOKUP and VLOOKUP](#HLOOKUP-and-VLOOKUP)
 
+[XLOOKUP Function](#XLOOKUP-Function)
+
 # Excel Formula Syntax
 
 ## MATCH FUNCTION
@@ -702,5 +704,87 @@ We can update our formula using named array,
 
 Just Select the Column from A to H.
 
-## Approximate Match Lookups
+## Approximate/Fuzzy Match Lookups
+
+- Approximate or Fuzzy Match Lookups allows us to find the range in which the lookup value is present.
+
+- Instead of tyring to find an exact match, we get the closest match that is equal to or less than the lookup value.
+
+**Task:**
+
+Our goal is to pull out the proper discount from Column G to Column C(Discont%) based on the value in Column B(Order Amount) and Column G(Minimum).
+
+![](./screenshots/fuzzy.jpg)
+
+
+**Solution:**   
+
+![](./screenshots/fuzzy1.jpg)
+
+Here, Discount is 10% because, Order Amount $82.68 falls in the range of $50 to $99.99.
+
+**Formula:**
+
+    =VLOOKUP(B2, $F$2:$G$5, 2, TRUE)
+
+    Here, 
+        - B2 is the lookup_value or common field, 
+        - $F$2:$G$5 is the table_array(Fielding Data Array), 
+        - 2 is the col_index_num, 
+        - TRUE is the range_lookup
+
+
+## Navigating Cell Ranges with INDEX 
+
+**INDEX** Function returns the value of the specified cell within an array.
+
+![](./screenshots/index.png)
+
+
+## Matching text & values with MATCH Function
+
+**MATCH** Function returns the position of a specific value within a column or row.
+
+![](./screenshots/match.jpg)
+
+
+**Example:**
+
+    =MATCH(10, $A$2:$A$5, 0)
+
+    Here, 
+        - 10 is the lookup_value whose position we have to find. 
+        - $A$2:$A$5 is the table_array(should be a 1D array. ie just one column or row), 
+        - 0 is the col_index_num,.
+
+## INDEX MATCH Function
+
+![](./screenshots/indexmatch.png)
+
+
+### Task:
+
+Get the price value based on product and size.
+
+**Solution:**
+
+![](./screenshots/indexmatch1.jpg)
+
+Formula:
+
+    =INDEX(D5:H9, MATCH(C14, $C$5:$C$9, 0), MATCH(D14, $D$4:$H$4, 0))
+
+
+    Here,
+        - D5:H9 is the table_array(should be a 2D array. ie multiple columns or rows), 
+        - MATCH(C14, $C$5:$C$9, 0) looking for match in the list of Products(Socks, Shorts...).
+        - MATCH(D14, $D$4:$H$4, 0) looking for match in the list of Sizes(xsmall, small, ...).
+        - 0 is the range_lookup
+
+# XLOOKUP Function
+
+Content: https://www.udemy.com/course/excel-for-analysts/learn/lecture/18154482#content
+
+
+
 
